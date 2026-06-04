@@ -1,6 +1,3 @@
-
-
-
 def celcius(f):
     return "Temperature in celcius is :", (f-32)*5/9
 
