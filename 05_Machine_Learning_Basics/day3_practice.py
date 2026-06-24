@@ -2,7 +2,6 @@ import pandas as pd
 import numpy as np
 from sklearn.model_selection import train_test_split
 
-# --- Dummy Data: Server Traffic ---
 data_server = {
     'Response_Time_ms': [12, 15, 20, 18, -5, 22, 25, 30, 8000, 28, 35, 40, 45, 50, 48, 55, 60, 65, 70, 75],
     'Traffic_Status': ['Low', 'Low', 'Low', 'Low', 'Low', 'Low', 'Low', 'Low', 'High', 'Low', 
@@ -12,27 +11,7 @@ df_server = pd.DataFrame(data_server)
 print("--- Original Data ---")
 print(df_server.head())
 
-# ==========================================
-# 👇 YAHAN SE NEECHAY AAPNE CODE LIKHNA HAI 👇
-# ==========================================
 
-# Step 1: X aur y banayein ('Response_Time_ms' X hoga, aur 'Traffic_Status' y hoga)
-# NOTE: X ko 2D rakhne ke liye double brackets use kijiye ga: df_server[['Response_Time_ms']]
-
-
-# Step 2: train_test_split karein (test_size=0.25, random_state=42, stratify=y zaroor lagayein)
-
-
-# Step 3: Golden Rule! Sirf X_train ke 'Response_Time_ms' se lower_limit (0.05) aur upper_limit (0.95) nikalein
-
-
-# Step 4: X_train par np.where() laga kar Capping karein
-
-
-# Step 5: X_test par BHI np.where() laga kar Capping karein (Using Train limits)
-
-
-#
 
 X=df_server[['Response_Time_ms']]
 y=df_server[ 'Traffic_Status']
